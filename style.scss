@@ -1,0 +1,61 @@
+$primary-color: rgb(108, 196, 240); //primary color
+
+//mixin for gradient background
+@mixin gradient($color1, $color2) {
+  background: linear-gradient(to right, $color1, $color2);
+}
+
+//gradient background to the body
+body {
+  @include gradient(#fba38d, #fde080);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgb(248, 142, 80);
+  border-radius: 8px;
+  box-shadow: 4px 10px;
+}
+
+.input-form {
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+}
+button {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  background-color: $primary-color;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+.summary {
+  margin-top: 40px;
+  text-align: center;
+}
+h3 {
+  margin: 10px 0;
+}
+h1 {
+  text-align: center;
+  display: flex;
+}
